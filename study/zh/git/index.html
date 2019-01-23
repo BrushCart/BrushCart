@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 基础操作 | 前端知识点总结</title>
+    <meta name="description" content="任何不能够给你快乐的编程都是耍流氓">
+    <link rel="icon" href="/study/logo.png">
+  <link rel="manifest" href="/study/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/study/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/study/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/study/assets/css/styles.df6c77d6.css" as="style"><link rel="preload" href="/study/assets/js/app.df6c77d6.js" as="script"><link rel="preload" href="/study/assets/js/24.c7f17428.js" as="script"><link rel="prefetch" href="/study/assets/css/1.styles.13518407.css"><link rel="prefetch" href="/study/assets/css/2.styles.6019013c.css"><link rel="prefetch" href="/study/assets/css/3.styles.f84d6947.css"><link rel="prefetch" href="/study/assets/css/4.styles.bd344d2d.css"><link rel="prefetch" href="/study/assets/css/5.styles.b58080af.css"><link rel="prefetch" href="/study/assets/css/6.styles.e21b0013.css"><link rel="prefetch" href="/study/assets/css/7.styles.65b127a3.css"><link rel="prefetch" href="/study/assets/js/1.13518407.js"><link rel="prefetch" href="/study/assets/js/10.f8af0ac0.js"><link rel="prefetch" href="/study/assets/js/11.335c9cfd.js"><link rel="prefetch" href="/study/assets/js/12.75b13fbc.js"><link rel="prefetch" href="/study/assets/js/13.9ebc7556.js"><link rel="prefetch" href="/study/assets/js/14.b63235dc.js"><link rel="prefetch" href="/study/assets/js/15.5af321a8.js"><link rel="prefetch" href="/study/assets/js/16.48ebd952.js"><link rel="prefetch" href="/study/assets/js/17.f7d02717.js"><link rel="prefetch" href="/study/assets/js/18.575593d0.js"><link rel="prefetch" href="/study/assets/js/19.5427ef36.js"><link rel="prefetch" href="/study/assets/js/2.6019013c.js"><link rel="prefetch" href="/study/assets/js/20.3f3f2357.js"><link rel="prefetch" href="/study/assets/js/21.fb0d71cc.js"><link rel="prefetch" href="/study/assets/js/22.df59f2d9.js"><link rel="prefetch" href="/study/assets/js/23.c270f1c2.js"><link rel="prefetch" href="/study/assets/js/25.20178a4a.js"><link rel="prefetch" href="/study/assets/js/26.ab00e085.js"><link rel="prefetch" href="/study/assets/js/27.c408e158.js"><link rel="prefetch" href="/study/assets/js/28.e8644796.js"><link rel="prefetch" href="/study/assets/js/29.a7b457a2.js"><link rel="prefetch" href="/study/assets/js/3.f84d6947.js"><link rel="prefetch" href="/study/assets/js/30.9126ebda.js"><link rel="prefetch" href="/study/assets/js/31.30b46578.js"><link rel="prefetch" href="/study/assets/js/32.0f3f2172.js"><link rel="prefetch" href="/study/assets/js/33.6f9b3095.js"><link rel="prefetch" href="/study/assets/js/34.d219057e.js"><link rel="prefetch" href="/study/assets/js/35.b8c07a0d.js"><link rel="prefetch" href="/study/assets/js/36.896e384c.js"><link rel="prefetch" href="/study/assets/js/37.f5fb55ff.js"><link rel="prefetch" href="/study/assets/js/38.73ce6bf1.js"><link rel="prefetch" href="/study/assets/js/39.6dd7ea35.js"><link rel="prefetch" href="/study/assets/js/4.bd344d2d.js"><link rel="prefetch" href="/study/assets/js/40.2dfe99a3.js"><link rel="prefetch" href="/study/assets/js/41.7bfcf952.js"><link rel="prefetch" href="/study/assets/js/42.fde1c9f6.js"><link rel="prefetch" href="/study/assets/js/43.1a758d79.js"><link rel="prefetch" href="/study/assets/js/44.6e1354a2.js"><link rel="prefetch" href="/study/assets/js/45.95323540.js"><link rel="prefetch" href="/study/assets/js/46.3ddde24e.js"><link rel="prefetch" href="/study/assets/js/47.059d036d.js"><link rel="prefetch" href="/study/assets/js/48.3a8e4548.js"><link rel="prefetch" href="/study/assets/js/49.027913bb.js"><link rel="prefetch" href="/study/assets/js/5.b58080af.js"><link rel="prefetch" href="/study/assets/js/50.0eff185b.js"><link rel="prefetch" href="/study/assets/js/51.942edd7f.js"><link rel="prefetch" href="/study/assets/js/52.f476ecb2.js"><link rel="prefetch" href="/study/assets/js/53.b7e26690.js"><link rel="prefetch" href="/study/assets/js/54.c022fb1a.js"><link rel="prefetch" href="/study/assets/js/55.05a61492.js"><link rel="prefetch" href="/study/assets/js/56.22da2004.js"><link rel="prefetch" href="/study/assets/js/57.58dadaa6.js"><link rel="prefetch" href="/study/assets/js/58.f860d2d7.js"><link rel="prefetch" href="/study/assets/js/59.6d7ca4ff.js"><link rel="prefetch" href="/study/assets/js/6.e21b0013.js"><link rel="prefetch" href="/study/assets/js/60.3149cae6.js"><link rel="prefetch" href="/study/assets/js/61.5fd2144b.js"><link rel="prefetch" href="/study/assets/js/62.27423a5c.js"><link rel="prefetch" href="/study/assets/js/63.2b4aa15e.js"><link rel="prefetch" href="/study/assets/js/64.ef9b7652.js"><link rel="prefetch" href="/study/assets/js/65.b204f6f6.js"><link rel="prefetch" href="/study/assets/js/66.52f6cb0d.js"><link rel="prefetch" href="/study/assets/js/67.18cbb443.js"><link rel="prefetch" href="/study/assets/js/68.16dceab4.js"><link rel="prefetch" href="/study/assets/js/69.ffb140c1.js"><link rel="prefetch" href="/study/assets/js/7.65b127a3.js"><link rel="prefetch" href="/study/assets/js/70.f16f0e0c.js"><link rel="prefetch" href="/study/assets/js/8.2b0061a2.js"><link rel="prefetch" href="/study/assets/js/9.32d1c154.js">
+    <link rel="stylesheet" href="/study/assets/css/styles.df6c77d6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">前端知识点总结</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/headline.html" class="nav-link">今日头条</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/quick.html" class="nav-link">快手</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/study/zh/git/" class="nav-link router-link-exact-active router-link-active">Git 操作</a></li></ul></div></div> <a href="https://github.com/jasonandjay" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/headline.html" class="nav-link">今日头条</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/quick.html" class="nav-link">快手</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/study/zh/git/" class="nav-link router-link-exact-active router-link-active">Git 操作</a></li></ul></div></div> <a href="https://github.com/jasonandjay" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Git 基础操作</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/study/zh/git/#git基础操作" class="sidebar-link">git基础操作</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="git基础操作"><a href="#git基础操作" aria-hidden="true" class="header-anchor">#</a> git基础操作</h2> <h4 id="_1-创建仓库"><a href="#_1-创建仓库" aria-hidden="true" class="header-anchor">#</a> 1 - 创建仓库</h4> <pre><code> Git init：在一个文件目录执行该指令，会把该目录快速设置成Git的代码仓库。
+-- Git clone：从远程服务器clone工程，也会创建一个代码仓库。
+</code></pre> <h4 id="_2-提交修改"><a href="#_2-提交修改" aria-hidden="true" class="header-anchor">#</a> 2 - 提交修改</h4> <pre><code>git status 
+查看当前仓库状态。会提示那些文件发生修改，哪些内容需要add&amp;commit。
+
+git add 文件名 
+添加文件到仓库
+git commit -m “这里是注释” 
+将add的文件添加注释并且提交到代码仓库
+git log 
+  能查看到刚才提交的信息
+git shortlog
+
+将开发者操作按照姓名分组
+
+git commit –amend -m “这里是追加的注释，会覆盖上次的注释”
+
+如果上一个注释写错，可以这样进行修改和追加。
+</code></pre> <h4 id="_3-diff比较不同"><a href="#_3-diff比较不同" aria-hidden="true" class="header-anchor">#</a> 3 - diff比较不同</h4> <pre><code>git diff ReadMe.txt(文件名)
+
+显示指定内容的前后变化
+
+git diff HEAD
+
+显示出上次提交节点的差别
+
+git还支持第三方更强大的diff工具：Meld、beyond compare
+
+gitk 
+图形化的log记录
+</code></pre> <h4 id="_4-别名设置，简化log"><a href="#_4-别名设置，简化log" aria-hidden="true" class="header-anchor">#</a> 4-别名设置，简化log</h4> <pre><code>`git config –global alias.lg “log –color –graph –pretty=format:’%Cred%h%Creset-%C(yellow)%d%Creset%s%Cgreen(%cr)%C(bold blue)
+2-Git操作区域
+Git三个区域：工作区(开发修改代码区域)、暂存区、历史区(保存各个版本区域)
+
+暂存区：Git根目录下 &gt; .git &gt; index的文件中，保存了所有的代码提交记录。
+
+add操作就是将记录保存到暂存区，此时Head依然指向之前的内容，通过commit将暂存区的内容全部提交，之后Head指向最新内容(通过gitk查看)
+
+Git管理的是修改内容，而不是文件
+3-Git回退
+git checkout ReadMe.txt(文件名) 
+将未add提交的修改内容全部还原 
+如果执行add后修改的内容，执行该指令会修改到执行好add后
+
+git checkout – ReadMe.txt(文件名)
+
+能将add提交的内容都回退掉
+
+git reset HEAD ReadMe.txt(文件名)
+
+文件从暂存区回退到工作区
+</code></pre> <h4 id="_5-回退版本"><a href="#_5-回退版本" aria-hidden="true" class="header-anchor">#</a> 5 - 回退版本</h4> <pre><code>git reset –hard HEAD~1 
+回退一个版本
+
+git reset –hard HEAD~5
+
+回退5个版本()
+
+hard参数：不仅仅是将本地版本库的头指针全部重置到指定版本，也会重置暂存区，并且会将工作区代码也回退到这个版本。
+
+也可以通过commit ID回退到对应版本。
+</code></pre> <h4 id="_6-操作历史"><a href="#_6-操作历史" aria-hidden="true" class="header-anchor">#</a> 6 - 操作历史</h4> <pre><code>git reflog 
+可以查看所有操作的历史！
+</code></pre> <h4 id="_7-文件操作"><a href="#_7-文件操作" aria-hidden="true" class="header-anchor">#</a> 7 - 文件操作</h4> <pre><code>git rm ReadMe.txt(文件名) 
+删除文件
+</code></pre> <h4 id="_8-文件暂存"><a href="#_8-文件暂存" aria-hidden="true" class="header-anchor">#</a> 8 - 文件暂存</h4> <pre><code>在main分支上开发功能的时候，开发到一半，发现了以前的BUG，这时新建一个BUG分支，在上面修复BUG。但是因为main分支开发的功能开发到一半，会导致BUG分支无法编译通过。这时候可以用`git stash`暂存当前的修改。在修改前的分支作为新的BUG分支。等解决BUG后切换回main分支的时候，再把暂存的内容Pop出来。 先checkout一个BUG分支，修改BUG后，用`git merge`合并到master分支，并且删除了BUG分支。这时候回到main分支，通过`git stash`pop出之前暂存的内容。
+git stash 
+暂存
+git stash list 
+查看当前暂存内容
+git stash apply/pop 
+内容恢复，后者会删除记录，前者可以通过git stash drop删除暂存记录。
+</code></pre> <p>9-远程仓库
+Git本地仓库和Git远程仓库通信，需要SSH进行身份认证。
+ssh-keygen -t rsa -C “yourname@example.com”</p> <pre><code>创建SSH私钥和公钥 
+id_rsa私钥用于验证自己身份。id_rsa.pub公钥用于向服务器表明自己的身份。
+
+git remote add
+
+将本地代码库提交到远程仓库
+
+git push -u origin master
+
+将本地master分支提交到远程的master分支，并关联起来。
+
+git pull –rebase
+
+如果Apush修改前，B push了修改，A push的时候需要先从远程获取最新修改。这个指令不会产生过多的merge历史。
+
+git clone git地址 
+就能从远程仓库clone下来，新建一个本地仓库。
+</code></pre> <h4 id="_10-分支管理"><a href="#_10-分支管理" aria-hidden="true" class="header-anchor">#</a> 10 - 分支管理</h4> <pre><code>git checkout -b first
+
+创建新分支，并且切换到该分支，等价于： 
+git brach first创建分支 
+git checkout first切换分支 
+如果此时有未提交的修改，是无法切换分支的，这时候就可以用git stash进行暂存
+
+git branch
+
+查看分支 
+-r显示所有远程分支，-a显示所有本地分支和远程分支
+
+(master)git merge first
+
+在first分支进行修改、add、commit后，切换到master分支，合并第一个分支到master分支。
+
+merge和rebase，rebase操作后时间线会合并，merge不会。其余都是一样的。
+
+git branch -d first
+
+删除分支first。-d是删除分支，-D是强行删除分支。
+
+git remote origin
+
+查看远程分支
+
+git remote -v origin
+
+查看详细信息
+
+git checkout -b dev
+
+git push origin dev 
+将dev分支推送到远程仓库。
+
+
+一般项目有一个中央的分支，用于打tag和发布realse版本。会新建一个develop分支进行开发，每个开发者再从develop分支新建自己的分支，功能完成后会merge到develop分支。 git add/commit 是分别从工作区，到暂存区，再到版本区。 git push用于版本区到远程仓库。 远程仓库获取最新内容是git pull到工作区 版本区到工作区是git checkout HEAD 暂存区到工作区是git checkout
+8-Tag
+Tag用于记录某个commit点或者分支的历史快照。Tag通常打在Master分支上，以保证代码的准确性。
+git tag version1 
+创建Tag，会记录在最后的提交上
+
+git tag version2 commitID(commit点的ID) 
+在commitID点加上tag
+git tag
+
+查看所有Tag
+
+git tag -a v1 -m “vesion1” b87123665216321635173
+
+-a制定tag名字，-m制定注释文字
+
+git show tag名字
+
+显示tag的详细信息
+
+git tag -d version0
+
+删除tag
+
+git push origin version0
+
+推送tag到远程仓库
+
+git push origin –tags
+
+推送所有本地tag到远程仓库
+
+删除远程Tag
+
+删除本地tag，再重新push到远程代码库。
+</code></pre></div> <div class="page-edit"><div class="edit-link"><a href="https://vuepress.vuejs.org/zh/git/" target="_blank" rel="noopener noreferrer">查看原文</a>
+        |  <a href="https://github.com/jasonandjay/edit/master/docs/zh/git/README.md" target="_blank" rel="noopener noreferrer">编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div> <!----></div></div>
+    <script src="/study/assets/js/app.df6c77d6.js" defer></script><script src="/study/assets/js/24.c7f17428.js" defer></script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c3446600de53c605ba4f6c792e47dff9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>
